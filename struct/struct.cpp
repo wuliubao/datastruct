@@ -46,33 +46,27 @@ private:
 public:
 };
 
+void string_io_test() {
 
+	// 整行输入
+	string line_string;
+	cout << "整行输入" << endl;
+	getline(cin, line_string);
+	cout << line_string << endl;
+
+	// 单个遍历输入
+	cout << "单个遍历输入" << endl;
+	string single_string;
+	while (cin >> single_string) {
+		cout << single_string << endl;
+	}
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Hello Test!\n";
 
-    string my_string;
-
-    while (cin >> my_string) {
-        cout << "inner";
-        string inner_string;
-        cin >> inner_string;
-    }
-
-    //string my_string;
-	//getline(cin, my_string);
-	//cout << my_string;
-
-
-	//string my;
-	//while (cin >> my) {
-	//	cout << my << endl;
-	//}
-
-    //for (char a : my_string) {
-    //    cout << a << endl;
-    //}
+	string_io_test();
 
 }
 
