@@ -139,7 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="sliding_window_algorithm.cpp" />
+    <ClCompile Include="string_algorithm.cpp" />
     <ClCompile Include="struct.cpp" />
+    <ClCompile Include="dynamic_programming.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

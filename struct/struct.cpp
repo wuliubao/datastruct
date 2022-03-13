@@ -5,6 +5,11 @@
 #include <string>
 using namespace std;
 
+extern void sliding_test();
+extern void string_algroithm_test();
+extern void dynamic_programming_test();
+
+
 template<class T>
 struct Node
 {
@@ -66,7 +71,7 @@ int main()
 {
     std::cout << "Hello Test!\n";
 
-	string_io_test();
+	string_algroithm_test();
 
 }
 
