@@ -139,7 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="container.cpp" />
     <ClCompile Include="sliding_window_algorithm.cpp" />
     <ClCompile Include="sort_algroithm.cpp" />
     <ClCompile Include="string_algorithm.cpp" />
