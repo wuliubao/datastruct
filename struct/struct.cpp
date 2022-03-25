@@ -3,12 +3,16 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include <algorithm>
+
 using namespace std;
 
 extern void sliding_test();
 extern void string_algroithm_test();
 extern void dynamic_programming_test();
 extern void sort_algroithm_test();
+extern void array_algroithm_test();
 
 template<class T>
 struct Node
@@ -67,10 +71,11 @@ void string_io_test() {
 	}
 }
 
+
+
 int main()
 {
     std::cout << "Hello Test!\n";
-
-
+	array_algroithm_test();
 }
 
