@@ -1,8 +1,39 @@
 #include <iostream>
 #include <vector>
+#include <regex>
+#include <stack>
+#include <set>
 
 using namespace std;
 
+int optPri(char opt) {
+	switch (opt) {
+	case '#':
+		return 1;
+		break;
+	case '$':
+		return 2;
+		break;
+	default:
+		break;
+	}
+}
+
+void alien_expression() {
+	string input;
+	cin >> input;
+
+	stack<int> numStack;
+	stack<char> optStack;
+
+	for (int i = 0; i < input.size(); i++) {
+		if (input[i] > '0' && input[i] < '9') {
+			numStack.push(input[i]);
+		}
+		if (input[i] == '#' || input[i] == 's') {
+		}
+	}
+}
 
 void bf(vector<size_t>& out, string& main, string& sub) {
 	size_t x = 0;
@@ -23,17 +54,27 @@ void bf(vector<size_t>& out, string& main, string& sub) {
 	}
 }
 
+
+void regex_test(vector<string>& container, string& in) {
+	regex split(" ");
+	vector<string> my(sregex_token_iterator(in.begin(), in.end(), split, -1), sregex_token_iterator());
+	container = my;
+}
+
 void string_algroithm_test() {
 	string main = "liu bao love xu tian tian, bao zai love tian niu";
 	string sub = "tian";
 
-	vector<size_t> out;
+	vector<string> out;
 
-	bf(out, main, sub);
+	regex_test(out, main);
+
+	//bf(out, main, sub);
+	set<string> my(out.begin(), out.end());
 
 
-	cout << out.size() << endl;
-	for (auto item : out) {
+	//cout << out.size() << endl;
+	for (auto item : my) {
 		cout << item << endl;
 	}
 }

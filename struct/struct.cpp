@@ -76,6 +76,6 @@ void string_io_test() {
 int main()
 {
     std::cout << "Hello Test!\n";
-	array_algroithm_test();
+	string_algroithm_test();
 }
 
