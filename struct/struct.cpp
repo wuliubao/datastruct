@@ -76,6 +76,6 @@ void string_io_test() {
 int main()
 {
     std::cout << "Hello Test!\n";
-	string_algroithm_test();
+	sliding_test();
 }
 
