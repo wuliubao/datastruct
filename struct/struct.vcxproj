@@ -140,11 +140,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="array_algroithm.cpp" />
+    <ClCompile Include="datastruct.cpp" />
     <ClCompile Include="sliding_window_algorithm.cpp" />
     <ClCompile Include="sort_algroithm.cpp" />
     <ClCompile Include="string_algorithm.cpp" />
     <ClCompile Include="struct.cpp" />
     <ClCompile Include="dynamic_programming.cpp" />
+    <ClCompile Include="test_alg.cpp" />
+    <ClCompile Include="test_array.cpp" />
+    <ClCompile Include="test_string.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h" />

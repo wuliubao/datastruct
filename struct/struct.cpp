@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+//#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -13,50 +14,9 @@ extern void string_algroithm_test();
 extern void dynamic_programming_test();
 extern void sort_algroithm_test();
 extern void array_algroithm_test();
+extern void test_array();
 
-template<class T>
-struct Node
-{
-public:
-	Node* next;
-	T value;
-public:
-	Node() {}
-	Node(T t, Node* next) {
-		this->value = t;
-		this->next = next;
-	}
-};
-
-template<typename T>
-void tarval(Node<T>* node) {
-	cout << node->value << endl;
-	if (node->next == nullptr) {
-		cout << "over" << endl;
-		return;
-	}
-	tarval(node->next);
-}
-
-template <class T>
-struct BSNode {
-public:
-    BSNode<T>* left;
-    BSNode<T>* right;
-    T value;
-    BSNode(BSNode<T>* left, BSNode<T>* right, T t) : left(left), right(right), value(t) {};
-};
-
-template <class T>
-class BSTree
-{
-private:
-    BSNode<T> value;
-public:
-};
-
-void string_io_test() {
-
+void acm_test() {
 	// 整行输入
 	string line_string;
 	cout << "整行输入" << endl;
@@ -71,11 +31,9 @@ void string_io_test() {
 	}
 }
 
-
-
 int main()
 {
     std::cout << "Hello Test!\n";
-	sliding_test();
+	test_array();
 }
 

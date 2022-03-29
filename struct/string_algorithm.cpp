@@ -56,13 +56,13 @@ void bf(vector<size_t>& out, string& main, string& sub) {
 
 
 void regex_test(vector<string>& container, string& in) {
-	regex split(" ");
+	regex split(" |,|'");
 	vector<string> my(sregex_token_iterator(in.begin(), in.end(), split, -1), sregex_token_iterator());
 	container = my;
 }
 
 void string_algroithm_test() {
-	string main = "liu bao love xu tian tian, bao zai love tian niu";
+	string main = "liu bao love xu tian tian, bao zai love ti'an niu";
 	string sub = "tian";
 
 	vector<string> out;
@@ -74,7 +74,7 @@ void string_algroithm_test() {
 
 
 	//cout << out.size() << endl;
-	for (auto item : my) {
+	for (auto item : out) {
 		cout << item << endl;
 	}
 }
