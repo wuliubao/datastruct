@@ -1,4 +1,5 @@
 #include <iostream>
+#include <queue>
 
 using namespace std;
 
@@ -16,22 +17,32 @@ void brute_force_old(int nums[], int size, int k) {
 
 int brute_force(int nums[], int size, int k) {
 	int total;
+	priority_queue<int, vector<int>, greater<int>> dis;
 	for (int i = 0; i < size; i++) {
 		total = 0;
 		for (int j = i; j < size; j++) {
 			total += nums[j];
 			if (total >= k) {
+				dis.push((j - i + 1));
 			}
 			cout << '[' << i << ',' << j << ", total=" << total << endl;
 		}
 	};
+
+	cout << "[";
+	while (!dis.empty()) {
+		cout << dis.top() << ',';
+		dis.pop();
+	}
+	cout << "]" << endl;
+
 	return 0;
 }
 
 void sliding_test() {
 	cout << "sliding!" << endl;
 	int nums[] = { 2,3,1,2,4,3 };
-	int k = 2;
+	int k = 7;
 	int value = brute_force(nums, sizeof(nums)/sizeof(nums[0]), k);
 
 }
