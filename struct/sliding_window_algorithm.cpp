@@ -39,10 +39,33 @@ int brute_force(int nums[], int size, int k) {
 	return 0;
 }
 
+void sliding_window_algorhtim(int nums[], int size, int k) {
+	int start = 0, end = 0, total = 0;
+	priority_queue<int, vector<int>, greater<int>> dis;
+	while (end < size) {
+		total += nums[end];
+		while (total >= k) {
+			dis.push(end - start + 1);
+			total -= nums[start];
+			start++;
+		}
+		end++;
+	}
+
+	cout << "[";
+	while (!dis.empty()) {
+		cout << dis.top() << ',';
+		dis.pop();
+	}
+	cout << "]" << endl;
+
+
+}
+
 void sliding_test() {
 	cout << "sliding!" << endl;
 	int nums[] = { 2,3,1,2,4,3 };
 	int k = 7;
-	int value = brute_force(nums, sizeof(nums)/sizeof(nums[0]), k);
+	sliding_window_algorhtim(nums, sizeof(nums)/sizeof(nums[0]), k);
 
 }

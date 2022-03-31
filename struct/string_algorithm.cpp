@@ -61,6 +61,20 @@ void regex_test(vector<string>& container, string& in) {
 	container = my;
 }
 
+void regex_int_test() {
+	string input;
+	getline(cin, input);
+	regex split(",");
+	vector<int> pro_array;
+	sregex_token_iterator end;
+	for (sregex_token_iterator iter(input.begin(), input.end(), split, -1); iter != end; iter++) {
+		pro_array.push_back(stoi(iter->str()));
+	}
+	for (int item : pro_array) {
+		cout << item << endl;
+	}
+};
+
 void string_algroithm_test() {
 	string main = "liu bao love xu tian tian, bao zai love ti'an niu";
 	string sub = "tian";

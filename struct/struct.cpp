@@ -31,9 +31,10 @@ void acm_test() {
 	}
 }
 
-int main()
+int main(int argc, char** argv)
 {
     std::cout << "Hello Test!\n";
-	test_array();
+	sliding_test();
+	return 0;
 }
 
