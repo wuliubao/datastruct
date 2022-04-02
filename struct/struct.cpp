@@ -34,7 +34,7 @@ void acm_test() {
 int main(int argc, char** argv)
 {
     std::cout << "Hello Test!\n";
-	sliding_test();
+	string_algroithm_test();
 	return 0;
 }
 
