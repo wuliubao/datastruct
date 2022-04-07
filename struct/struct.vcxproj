@@ -146,9 +146,6 @@
     <ClCompile Include="string_algorithm.cpp" />
     <ClCompile Include="struct.cpp" />
     <ClCompile Include="dynamic_programming.cpp" />
-    <ClCompile Include="test_alg.cpp" />
-    <ClCompile Include="test_array.cpp" />
-    <ClCompile Include="test_string.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h" />
